@@ -85,7 +85,7 @@ Step 6: Remote Desktop into DC-1 to create two Organzational Units (OU) titled "
 <img src="https://i.imgur.com/Urmjpmq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Step 7: Changed Client-1's DNS settings in Azure to match the same private IP Address as DC-1. Next, I added client one to the same domain as DC-1. Lastly, I created a new OU named "_clients".
+Step 7: Changed Client-1's DNS settings in Azure to match the same private IP Address as DC-1. Next, I added Client-1  to the same domain as DC-1. Lastly, I created a new OU named "_clients".
 </p>
 <br />
 
