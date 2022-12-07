@@ -19,10 +19,10 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Step 1: Created Domain Controller VM (Windows Server 2022) titled "DC-1" & client VM titled "Client-1"
+- Step 2: Set Domain Controller's NIC private IP Address to static & ensured both VMs are in same Vnet
+- Step 3: Ensured communication between both VMs via perpetual ping: cmd:ping -t
+- Step 4: 
 
 <h2>Deployment and Configuration Steps</h2>
 
