@@ -21,13 +21,14 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 - Step 1: Created Domain Controller VM (Windows Server 2022) titled "DC-1" & client VM titled "Client-1"
 - Step 2: Set Domain Controller's NIC private IP Address to static & ensured both VMs are in same Vnet
-- Step 3: Ensured communication between both VMs via perpetual ping: cmd:ping -t
-- Step 4: Remote Desktop into DC-1 to install Active Directory and setup a new domain
-- Step 5: Created Organzational Unit (OU) titled "Admins" and another titled "Employees" within Active Directory 
-- Step 6: Joined Client-1 to created domain
-- Step 7: Setup Remote Desktop for non-admin users on Client-1
-- Step 8: Created additional users on Client-1 via script then uploaded via Powershell
-- Step 9: Logged into a new user account on Client-1 VM
+- Step 3: Remote Desktop into DC-1 to allow permissions on DC-1's Firewall
+- Step 4: Ensure communication between both VMs via perpetual ping using cmd:ping -t (Ip Address)
+- Step 5: Remote Desktop into DC-1 to install Active Directory and setup a new domain
+- Step 6: Created Organzational Unit (OU) titled "Admins" and another titled "Employees" within Active Directory 
+- Step 7: Joined Client-1 to created domain
+- Step 8: Setup Remote Desktop for non-admin users on Client-1
+- Step 9: Created additional users on Client-1 via script then uploaded via Powershell
+- Step 10: Logged into a new user account on Client-1 VM
 
 <h2>Deployment and Configuration Steps</h2>
 
