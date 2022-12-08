@@ -101,7 +101,7 @@ Step 8: Use Remote Desktop in the system settings to allow "domain users" access
 <img src="https://i.imgur.com/XnDeUOB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Upload script with 100 additional users via Powershell ISE to Client-1. This will create 100 new users with random names. This is done to simulate employees within the company.
+Use a random account generating script to create at least 100 users for this lab. Upload script via Powershell ISE (run as administrator) to Client-1. This will create 100 new users with random names. This is done to simulate employees within the company.
 </p>
 <br />
 
