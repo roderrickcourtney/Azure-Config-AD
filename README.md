@@ -36,7 +36,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://i.imgur.com/EVJ3emt.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Step:1 Log into Azure --> search "virtual machines" --> click "create azure virtual machine" to create VM#1. Name this first virtual machine "DC-1" using your current region --> set the image type as Windows Server 2022 (effectively making it a domain for the lab) --> Set username and password --> create VM #2 --> title it "Client-1" (repeat the same steps used to create VM#1 except for the image type select Windows 10 pro since this VM will be the employees'/ cleints' computer).
+Step:1 Log into Azure --> search "virtual machines" --> click "create azure virtual machine" to create VM#1. Name this first virtual machine "DC-1" using your current region --> set the image type as "Windows Server 2022" (effectively making it a domain for the lab) --> Set username and password --> create VM #2 --> title it "Client-1" (repeat the same steps used to create VM#1 except for the image type select "Windows 10 pro" since this VM will be the employees'/ cleints' computer).
 </p>
 <br />
 
@@ -44,7 +44,7 @@ Step:1 Log into Azure --> search "virtual machines" --> click "create azure virt
 <img src="https://i.imgur.com/yFq1CCq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Step:2 Go to DC-1's network settings --> networking under settings (on the middle left hand side) --> click the hyperlink next to "network interface" --> "IP Configurations" under settings (on the middle left hand side) --> "ipconfig1" --> change the assignment from dynamic to static (this ensures DC-1's IP address will not change) --> check the NIC settings to make sure both VMs are on the same Vnet. This will ensure both VMs can communicate & connect with each other later in this lab.
+Step:2 Go to DC-1's network settings --> select networking --> click the hyperlink next to "network interface" --> "IP Configurations" --> "ipconfig1" --> change the assignment from dynamic to static (this ensures DC-1's IP address will not change) --> check the NIC settings to make sure both VMs are on the same "Vnet". This will ensure both VMs can communicate & connect with each other later in this lab.
 </p>
 <br />
 
@@ -52,7 +52,7 @@ Step:2 Go to DC-1's network settings --> networking under settings (on the middl
 <img src="https://i.imgur.com/PhAxO44.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Step 3: Remote Desktop into VM#1 aka DC-1 via windows firwall security settings to allow IPV4 permissions on DC-1's Firewall. This will open the firewall for connectivity after DC-1 is converted into a domain. 
+Step 3: Remote Desktop into DC-1 via windows firwall security settings to allow "IPV4 permissions" on DC-1's Firewall. This will open the firewall for connectivity after DC-1 is converted into a domain. 
 </p>
 <br />
 
@@ -68,7 +68,7 @@ Step 4: Ensure communication between both VMs via perpetual ping using cmd:ping 
 <img src="https://i.imgur.com/xgMuhJO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Step 5: Installed Active Directory on DC-1. Set up DC-1 as a new domain.
+Step 5: Install "Active Directory" on DC-1. Set up DC-1 as a new domain.
 </p>
 <br />
 
@@ -76,7 +76,7 @@ Step 5: Installed Active Directory on DC-1. Set up DC-1 as a new domain.
 <img src="https://i.imgur.com/SVRL4NQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Step 6: Remote Desktop into DC-1 to create two Organzational Units (OU), one titled "Admins" and another titled "Employees" within Active Directory.
+Step 6: Remote Desktop into DC-1 to create two "Organzational Units" (OU), one titled "Admins" and another titled "Employees" within Active Directory.
 </p>
 <br />
 
@@ -85,7 +85,7 @@ Step 6: Remote Desktop into DC-1 to create two Organzational Units (OU), one tit
 <img src="https://i.imgur.com/Urmjpmq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Step 7: Change Client-1's "DNS settings" in Azure to match the same private IP Address as DC-1 via "network settings" in DC-1. Go into Client-1's network settings --> Network Interface (NIC) --> DNS server --> custom DNS settings --> add DC-1's private IP Address as the DNS server to connect to for Client-1. Restart Client-1 to flush DNS cache --> change Client-1 to the same domain as DC-1 via "about PC" --> :rename this PC advanced" --> type DC-1's domain name under the "domain section" --> create a new OU named "_clients".
+Step 7: Change Client-1's "DNS settings" in Azure to match the same private IP Address as DC-1 via network settings in DC-1. Go into Client-1's network settings --> Network Interface (NIC) --> DNS server --> custom DNS settings --> add DC-1's private IP Address as the DNS server to connect to for Client-1. Restart Client-1 to flush the DNS cache --> change Client-1 to the same domain as DC-1 via "about PC" --> rename this PC advanced --> type DC-1's domain name under the "domain section" --> create a new OU named "_clients".
 </p>
 <br />
 
@@ -93,7 +93,7 @@ Step 7: Change Client-1's "DNS settings" in Azure to match the same private IP A
 <img src="https://i.imgur.com/ekCSO1N.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Step 8: Use Remote Desktop in the system settings to allow "domain users" access for all non-admin users on Client-1 VM under "user accounts" --> "select users that can remotely access this PC" --> click "add" and type in "domain users". 
+Step 8: Use Remote Desktop in the system settings to allow domain users access for all non-admin users on Client-1 VM under "user accounts" --> "select users that can remotely access this PC" --> click "add" and type in "domain users". 
 </p>
 <br />
 
@@ -101,7 +101,7 @@ Step 8: Use Remote Desktop in the system settings to allow "domain users" access
 <img src="https://i.imgur.com/XnDeUOB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Use a random account generating script to create at least 100 users for this lab. Upload script via Powershell ISE (run as administrator) to Client-1. This will create 100 new users with random names. This is done to simulate employees within the company.
+Use a random account generating script to create at least 100 users for this lab. Upload script via "Powershell ISE" (run as administrator) to Client-1. This will create 100 new users with random names. This is done to simulate employees within the company.
 </p>
 <br />
 
@@ -109,6 +109,6 @@ Use a random account generating script to create at least 100 users for this lab
 <img src="https://i.imgur.com/4wPUapk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Log into a new user account (one generated from the script) on Client-1 VM. The login attempt with the user's name & generic password should be successful. That is the conclusion of this lab.
+Log into any newly generated user account on Client-1 VM. The login attempt with the user's name & generic password should be successful. That is the conclusion of this lab.
 </p>
 <br />
