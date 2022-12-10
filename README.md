@@ -109,6 +109,6 @@ Use a random account generating script to create at least 100 users for this lab
 <img src="https://i.imgur.com/4wPUapk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Log into a new user account (one generated from the script) on Client-1 VM. The login attempt with the user's name & generic password should be successful. This is the conclusion of this lab, thank you for viewing!
+Log into a new user account (one generated from the script) on Client-1 VM. The login attempt with the user's name & generic password should be successful. That is the conclusion of this lab.
 </p>
 <br />
